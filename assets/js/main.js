@@ -1,33 +1,36 @@
+// some global vars for convenience
 R = {
     query: '',
     filters: ''
 };
 
 $(function () {
-    console.log('Page loaded');
-
+    // initialize API surface
     var client = algoliasearch('S4LNH5OS8A', '4d0df2379cbd3102de0e8edda8b630d8');
     var index = client.initIndex('dev_restaurants');
-    // index.setSettings({attributesForFaceting: ['food_type']});
     var algoliaHelper = algoliasearchHelper(client, 'dev_restaurants', {
         hitsPerPage: 10,
         index: 'dev_restaurants',
         facets: ['food_type']
     });
     
+    // get geolocation data or fall back
+    var location_parameter, location_value;
     if ('geolocation' in navigator) {
-      /* geolocation is available */
-      navigator.geolocation.getCurrentPosition(function (position) {
+        navigator.geolocation.getCurrentPosition(function (position) {
         R['position'] = position;
-        // position.coords.latitude, position.coords.longitude);
+        // position.coords.latitude, position.coords.longitude
+        location_parameter = 'aroundLatLng';
+        location_value = R.position.coords.latitude+','+R.position.coords.longitude;
         api_call('');
-          
       });
     } else {
-        
-      /* geolocation IS NOT available */
+        location_parameter = 'aroundLatLngViaIP';
+        location_value = true;
+        api_call('');
     }
     
+    // UI visual updates
     var ui_update = function (content) {
         if (typeof(content) != 'undefined') {
             var results_number = content.nbHits;
@@ -70,17 +73,7 @@ $(function () {
         }
     }
     
-    algoliaHelper.on('result', function (content, state) {
-        // TODO error handling
-        
-        // for (var h in content.hits) {
-        //     console.log('Hit(' + content.hits[h].objectID + '): ' + content.hits[h].toString());
-        // }
-        
-        // console.log(content.facets[0].data);
-        ui_update(content);
-    });
-    
+    // utility to come up with counts for food type categories
     var coarse_facet_count = function (facet_counts, coarse_facet_name) {
         var count = 0;
         coarse_facet_name = coarse_facet_name.toLowerCase();
@@ -92,33 +85,31 @@ $(function () {
         return count;
     }
     
-    $('.type li').on('click', function () {
-        if ($(this).not('.active')) {
-            $('.type li').removeClass('active');
-            $(this).addClass('active');
-            R.filters = 'food_type:'+$(this).find('.name').text();
-            api_call();
-        }
-    });
-    
     var api_call = function (query) {
-        var arg1 = 'aroundLatLng';
-        var arg2 = R.position.coords.latitude+','+R.position.coords.longitude;
-        arg1 = 'aroundLatLngViaIP';
-        arg2 = true;
         if (typeof(query) == 'undefined') {
             query = R.query;
         }
         if (typeof(R.filters) != 'undefined') {
             algoliaHelper.setQueryParameter('filters', R.filters);
         }
-        algoliaHelper.setQueryParameter(arg1, arg2)
+        algoliaHelper.setQueryParameter(location_parameter, location_value)
             .setQuery(query)
             .search();
     }
     
-    // ui_update();
-
+    // bind UI update to query result
+    algoliaHelper.on('result', function (content, state) {
+        // TODO error handling
+        
+        // for (var h in content.hits) {
+        //     console.log('Hit(' + content.hits[h].objectID + '): ' + content.hits[h].toString());
+        // }
+        
+        // console.log(content.facets[0].data);
+        ui_update(content);
+    });
+    
+    // UI search bar key input
     $('#search').on('keyup', function () {
         var query = $(this).val().trim();
         // cache the query, also adding spaces won't matter
@@ -127,8 +118,17 @@ $(function () {
         } else {
             R.query = query;
         }
-        
         api_call(query);
+    });
+    
+    // UI filter clicks
+    $('.type li').on('click', function () {
+        if ($(this).not('.active')) {
+            $('.type li').removeClass('active');
+            $(this).addClass('active');
+            R.filters = 'food_type:'+$(this).find('.name').text();
+            api_call();
+        }
     });
     
     $('.more').on('click', function (ev) {
