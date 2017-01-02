@@ -21,7 +21,7 @@
       <input id="search" type="text" autocomplete="off" placeholder="Search for Restaurants by Name, Cuisine, Location" />
     </div>
     <div class="left compartment">
-      <ul class="type filter">
+      <ul class="food_type filter">
         <h2>Cuisine/Food Type</h2>
         <li>
           <span class="name">Italian</span>
@@ -52,46 +52,46 @@
           <span class="count">N/A</span>
         </li>
       </ul>
-      <ul class="rating">
+      <ul class="rating filter">
         <h2>Rating</h2>
-        <li>
+        <li data-stars="0">
           <span class="stars">
             <div class="stars_gray"></div>
             <div class="stars_yellow" style="width: 0%;"></div>
           </span>
         </li>
-        <li>
+        <li data-stars="1">
           <span class="stars">
             <div class="stars_gray"></div>
             <div class="stars_yellow" style="width: 20%;"></div>
           </span>
         </li>
-        <li>
+        <li data-stars="2">
           <span class="stars">
             <div class="stars_gray"></div>
             <div class="stars_yellow" style="width: 40%;"></div>
           </span>
         </li>
-        <li>
+        <li data-stars="3">
           <span class="stars">
             <div class="stars_gray"></div>
             <div class="stars_yellow" style="width: 60%;"></div>
           </span>
         </li>
-        <li>
+        <li data-stars="4">
           <span class="stars">
             <div class="stars_gray"></div>
             <div class="stars_yellow" style="width: 80%;"></div>
           </span>
         </li>
-        <li>
+        <li data-stars="5">
           <span class="stars">
             <div class="stars_gray"></div>
             <div class="stars_yellow" style="width: 100%;"></div>
           </span>
         </li>
       </ul>
-      <ul class="payments">
+      <ul class="payments filter">
         <h2>Payment Options</h2>
         <li>Amex</li>
         <li>Visa</li>
@@ -99,13 +99,13 @@
       </ul>
     </div>
     <div class="right compartment">
-      <div class="results">
-        <div class="results_container">
-          <span class="ui_results_quantity"></span>
-          <span class="ui_results_time"></span>
+      <div class="result_stats_container">
+        <div class="result_stats">
+          <span class="result_stats_quantity"></span>
+          <span class="result_stats_time"></span>
         </div>
       </div>
-      <ul class="resto_listings">
+      <ul class="restaurant_listings">
         <li class="restaurant_listing template">
           <div class="photo"></div>
           <div class="row">
@@ -126,7 +126,7 @@
           </div>
         </li>
       </ul>
-      <div class="more"><span>Show more</span></div>
+      <div id="more"><span>Show more</span></div>
     </div>
   </div>
 
@@ -136,5 +136,6 @@
   <script src="https://cdn.jsdelivr.net/algoliasearch.helper/2/algoliasearch.helper.min.js"></script>
   <script src="assets/js/vendor/papaparse.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <!-- <script src="assets/js/data_indexing.js"></script> -->
 </body>
 </html>

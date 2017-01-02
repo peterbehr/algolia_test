@@ -1,3 +1,5 @@
+// utility for massaging data into the form needed before indexing
+
 (function(console){
 
 console.save = function(data, filename){
@@ -41,6 +43,7 @@ $(function () {
             download: true,
             skipEmptyLines: true,
             header: true,
+            dynamicTyping: true, // for ratings to be integers
             complete: function (results) {
                 restaurants_info = results['data']
                 

@@ -41,24 +41,6 @@ ul {
     color: rgb(191, 191, 191);
 }
 
-.left li {
-    padding: 0 1em;
-    border-radius: 4px;
-    line-height: 1.8;
-    cursor: pointer;
-    &.active, &:hover {
-        background: rgb(40, 151, 197);
-        color: rgb(255, 255, 255);
-        .count {
-            color: rgb(255, 255, 255);
-        }
-    }
-}
-
-.rating li {
-    margin-bottom: 0.25em;
-}
-
 .clearfix:after {
     content: " "; /* Older browser do not support empty content */
     visibility: hidden;
@@ -67,20 +49,7 @@ ul {
     clear: both;
 }
 
-.welcome-container {
-  margin: 50px 0 0 0;
-  text-align: center;
-  font-size: 2em;
-  p {
-    margin: 5px;
-  }
-}
-
-.template {
-    display: none;
-}
-
-.results {
+.result_stats_container {
     margin: 0 0 2em 0;
     position: relative;
     line-height: 1.4;
@@ -94,17 +63,17 @@ ul {
       bottom: 0.4em;
       left: 0;
     }
-    .results_container {
+    .result_stats {
         background: rgb(255, 255, 255);
         position: relative;
         z-index: 1;
         padding: 0 1em 0 0;
         display: inline;
-        .ui_results_quantity {
+        .result_stats_quantity {
             font-size: 1.18em;
             font-weight: 600;
         }
-        .ui_results_time {
+        .result_stats_time {
             font-size: 1em;
             z-index: 1;
         }
@@ -213,25 +182,65 @@ $length_stars_height: 40px;
         float: left;
         width: 24%;
         border-right: 1px solid $color_gray_lighter;
+        height: 100%;
+    }
+    .filter li {
+        padding: 0 1em;
+        border-radius: 4px;
+        line-height: 1.8;
+        cursor: pointer;
+        &.active, &:hover {
+            background: rgb(40, 151, 197);
+            color: rgb(255, 255, 255);
+            .count {
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+    .rating li {
+        margin-bottom: 0.25em;
+        border-radius: 0;
+        border-left: transparent 2px solid;
+        &.active, &:hover {
+            background: none;
+            color: inherit;
+            border-left: $color-gray-lighter solid 2px;
+            .count {
+                color: inherit;
+            }
+            // this is an ugly active state but opaque asset forces me into it
+        }
+    }
+    .template {
+        display: none;
     }
     .right {
         float: right;
         width: 75%;
     }
-}
-
-.more {
-    text-align: center;
-    span {
-        border: 1px $color_gray_lighter solid;
-        color: rgb(127, 127, 127);
-        border-radius: 5px;
-        font-size: 1.18em;
-        font-weight: 600;
-        line-height: 3;
-        margin: 0 auto;
-        padding: 0 3em;
-        display: inline-block;
-        cursor: pointer;
+    #more {
+        text-align: center;
+        display: none; // initial state
+        span {
+            border: 1px $color_gray_lighter solid;
+            color: rgb(127, 127, 127);
+            border-radius: 5px;
+            font-size: 1.18em;
+            font-weight: 600;
+            line-height: 3;
+            margin: 0 auto;
+            padding: 0 3em;
+            display: inline-block;
+            cursor: pointer;
+        }
     }
 }
+
+//.welcome-container {
+//  margin: 50px 0 0 0;
+//  text-align: center;
+//  font-size: 2em;
+//  p {
+//    margin: 5px;
+//  }
+//}

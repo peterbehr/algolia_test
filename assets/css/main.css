@@ -30,20 +30,6 @@ ul {
 :-ms-input-placeholder {
   color: #bfbfbf; }
 
-.left li {
-  padding: 0 1em;
-  border-radius: 4px;
-  line-height: 1.8;
-  cursor: pointer; }
-  .left li.active, .left li:hover {
-    background: #2897c5;
-    color: white; }
-    .left li.active .count, .left li:hover .count {
-      color: white; }
-
-.rating li {
-  margin-bottom: 0.25em; }
-
 .clearfix:after {
   content: " ";
   /* Older browser do not support empty content */
@@ -52,21 +38,11 @@ ul {
   height: 0;
   clear: both; }
 
-.welcome-container {
-  margin: 50px 0 0 0;
-  text-align: center;
-  font-size: 2em; }
-  .welcome-container p {
-    margin: 5px; }
-
-.template {
-  display: none; }
-
-.results {
+.result_stats_container {
   margin: 0 0 2em 0;
   position: relative;
   line-height: 1.4; }
-  .results:before {
+  .result_stats_container:before {
     background: #e6e6e6;
     content: " ";
     display: block;
@@ -75,16 +51,16 @@ ul {
     width: 100%;
     bottom: 0.4em;
     left: 0; }
-  .results .results_container {
+  .result_stats_container .result_stats {
     background: white;
     position: relative;
     z-index: 1;
     padding: 0 1em 0 0;
     display: inline; }
-    .results .results_container .ui_results_quantity {
+    .result_stats_container .result_stats .result_stats_quantity {
       font-size: 1.18em;
       font-weight: 600; }
-    .results .results_container .ui_results_time {
+    .result_stats_container .result_stats .result_stats_time {
       font-size: 1em;
       z-index: 1; }
 
@@ -170,23 +146,46 @@ ul {
   .app .left {
     float: left;
     width: 24%;
-    border-right: 1px solid #e6e6e6; }
+    border-right: 1px solid #e6e6e6;
+    height: 100%; }
+  .app .filter li {
+    padding: 0 1em;
+    border-radius: 4px;
+    line-height: 1.8;
+    cursor: pointer; }
+    .app .filter li.active, .app .filter li:hover {
+      background: #2897c5;
+      color: white; }
+      .app .filter li.active .count, .app .filter li:hover .count {
+        color: white; }
+  .app .rating li {
+    margin-bottom: 0.25em;
+    border-radius: 0;
+    border-left: transparent 2px solid; }
+    .app .rating li.active, .app .rating li:hover {
+      background: none;
+      color: inherit;
+      border-left: #e6e6e6 solid 2px; }
+      .app .rating li.active .count, .app .rating li:hover .count {
+        color: inherit; }
+  .app .template {
+    display: none; }
   .app .right {
     float: right;
     width: 75%; }
-
-.more {
-  text-align: center; }
-  .more span {
-    border: 1px #e6e6e6 solid;
-    color: #7f7f7f;
-    border-radius: 5px;
-    font-size: 1.18em;
-    font-weight: 600;
-    line-height: 3;
-    margin: 0 auto;
-    padding: 0 3em;
-    display: inline-block;
-    cursor: pointer; }
+  .app #more {
+    text-align: center;
+    display: none; }
+    .app #more span {
+      border: 1px #e6e6e6 solid;
+      color: #7f7f7f;
+      border-radius: 5px;
+      font-size: 1.18em;
+      font-weight: 600;
+      line-height: 3;
+      margin: 0 auto;
+      padding: 0 3em;
+      display: inline-block;
+      cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */
