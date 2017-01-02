@@ -46,9 +46,9 @@ $(function () {
         
         // console.log(content.nbHits, content.hitsPerPage);
         if (content.nbHits <= content.hitsPerPage) {
-            $('.more').hide();
+            $('#more').hide();
         } else {
-            $('.more').show();
+            $('#more').show();
         }
         
         // this should not clear out all the counts to zero upon filtering, but this would require caching facet counts so that we can use the old ones on all non filtering UI updates, but then when we change a filter with a given text query, to get the facet counts for the query without that filter applied also...tricky logic and would need to be thought out carefully
