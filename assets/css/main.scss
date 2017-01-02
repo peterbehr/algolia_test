@@ -35,6 +35,12 @@ ul {
     }
 }
 
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+    color: rgb(191, 191, 191);
+}
+
 .left li {
     padding: 0 1em;
     border-radius: 4px;
@@ -228,10 +234,4 @@ $length_stars_height: 40px;
         display: inline-block;
         cursor: pointer;
     }
-}
-
-::-webkit-input-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder {
-    color: rgb(191, 191, 191);
 }

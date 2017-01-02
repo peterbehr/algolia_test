@@ -25,6 +25,11 @@ ul {
     font-size: 1.18em;
     font-weight: 600; }
 
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: #bfbfbf; }
+
 .left li {
   padding: 0 1em;
   border-radius: 4px;
@@ -183,10 +188,5 @@ ul {
     padding: 0 3em;
     display: inline-block;
     cursor: pointer; }
-
-::-webkit-input-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder {
-  color: #bfbfbf; }
 
 /*# sourceMappingURL=main.css.map */
