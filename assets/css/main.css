@@ -1,0 +1,192 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  background: url("../../resources/graphics/background.png");
+  color: #333333; }
+
+ul {
+  margin: 0 0 1em 0;
+  padding: 0; }
+  ul li {
+    list-style-position: outside;
+    list-style-type: none; }
+    ul li .count {
+      float: right;
+      color: #9a9a9a; }
+  ul h2 {
+    margin: 0 0 0.5em 0;
+    font-size: 1.18em;
+    font-weight: 600; }
+
+.left li {
+  padding: 0 1em;
+  border-radius: 4px;
+  line-height: 1.8;
+  cursor: pointer; }
+  .left li.active, .left li:hover {
+    background: #2897c5;
+    color: white; }
+    .left li.active .count, .left li:hover .count {
+      color: white; }
+
+.rating li {
+  margin-bottom: 0.25em; }
+
+.clearfix:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+.welcome-container {
+  margin: 50px 0 0 0;
+  text-align: center;
+  font-size: 2em; }
+  .welcome-container p {
+    margin: 5px; }
+
+.template {
+  display: none; }
+
+.results {
+  margin: 0 0 2em 0;
+  position: relative;
+  line-height: 1.4; }
+  .results:before {
+    background: #e6e6e6;
+    content: " ";
+    display: block;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+    bottom: 0.4em;
+    left: 0; }
+  .results .results_container {
+    background: white;
+    position: relative;
+    z-index: 1;
+    padding: 0 1em 0 0;
+    display: inline; }
+    .results .results_container .ui_results_quantity {
+      font-size: 1.18em;
+      font-weight: 600; }
+    .results .results_container .ui_results_time {
+      font-size: 1em;
+      z-index: 1; }
+
+.restaurant_listing {
+  margin: 0 0 2em 0;
+  position: relative;
+  padding: 0 0 0 9.5em;
+  min-height: 8em;
+  font-family: 'Helvetica', sans-serif; }
+  .restaurant_listing .photo {
+    width: 8em;
+    height: 8em;
+    border-radius: 4px;
+    background: #c8beaa;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .restaurant_listing .photo img {
+      display: block;
+      width: 100%; }
+  .restaurant_listing .gray {
+    color: darkgray; }
+  .restaurant_listing .row {
+    margin: 0 0 0.5em 0;
+    line-height: 1.5em; }
+  .restaurant_listing .name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.34em;
+    font-weight: 600; }
+  .restaurant_listing .rating {
+    font-family: 'Open Sans', sans-serif;
+    color: #ffab66;
+    font-weight: 600;
+    margin-right: 0.5em;
+    font-size: 1.18em; }
+  .restaurant_listing .separators span + span {
+    border-left: darkgray 1.5px solid;
+    margin-left: 0.1em;
+    padding-left: 0.40em; }
+
+.stars {
+  display: inline-block;
+  position: relative;
+  width: 102px;
+  height: 20px;
+  margin-right: 0.5em; }
+  .stars .stars_gray,
+  .stars .stars_yellow {
+    background-image: url("../../resources/graphics/stars-icons_.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+  .stars .stars_gray {
+    background-position: 0 0;
+    z-index: 1; }
+  .stars .stars_yellow {
+    background-position: 0 -20px;
+    z-index: 2; }
+
+.app {
+  background: white;
+  width: 1060px;
+  margin: 3em auto;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25); }
+  .app .compartment {
+    padding: 2em; }
+  .app .search {
+    background: #1c688e; }
+    .app .search input[type=text] {
+      width: 100%;
+      display: block;
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      line-height: 2em;
+      height: 2em;
+      padding: 0 0.5em;
+      font-size: 1.2em; }
+  .app .left {
+    float: left;
+    width: 24%;
+    border-right: 1px solid #e6e6e6; }
+  .app .right {
+    float: right;
+    width: 75%; }
+
+.more {
+  text-align: center; }
+  .more span {
+    border: 1px #e6e6e6 solid;
+    color: #7f7f7f;
+    border-radius: 5px;
+    font-size: 1.18em;
+    font-weight: 600;
+    line-height: 3;
+    margin: 0 auto;
+    padding: 0 3em;
+    display: inline-block;
+    cursor: pointer; }
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: #bfbfbf; }
+
+/*# sourceMappingURL=main.css.map */
