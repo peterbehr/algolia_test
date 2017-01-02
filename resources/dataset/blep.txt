@@ -1,0 +1,17 @@
+objectID;food_type;stars_count;reviews_count;neighborhood;phone_number;price_range;dining_style
+
+101422;Contemporary American;4.6;180;Carbondale;(970) 963-6328;$30 and under;Casual Dining
+
+
+
+
+;name;address;area;city;country;image_url;mobile_reserve_url;payment_options;phone;postal_code;price;reserve_url;state;_geoloc
+
+;;;;;;;;;;;;;;
+
+
+
+"food_type":null,"stars_count":null,"reviews_count":null,"neighborhood":null,"phone_number":null,"price_range":null,"dining_style":null
+
+
+{"objectID":99943,"name":"The Edgewater Grill","address":"861 West Harbor Dr","area":"San Diego","city":"San Diego","country":"US","image_url":"https://www.opentable.com/img/restimages/99943.jpg","mobile_reserve_url":"http://mobile.opentable.com/opentable/?restId=99943","payment_options":["AMEX","Discover","MasterCard","Visa"],"phone":"6192327581","postal_code":"92101","price":2,"reserve_url":"http://www.opentable.com/single.aspx?rid=99943","state":"CA","_geoloc":{"lat":32.708708,"lng":-117.171296},"food_type":null,"stars_count":null,"reviews_count":null,"neighborhood":null,"phone_number":null,"price_range":null,"dining_style":null}
