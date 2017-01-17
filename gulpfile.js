@@ -22,7 +22,8 @@ gulp.task('sass', function() {
   return gulp.src("assets/scss/*.scss")
     .pipe(sass({
       sourceComments: 'map',
-      sourceMap: 'scss'
+      sourceMap: 'scss',
+      noCache : true
     }))
     .pipe(gulp.dest("assets/css"))
     .pipe(browserSync.stream());

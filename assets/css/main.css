@@ -1,3 +1,4 @@
+/* line 4, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
 *,
 *:before,
 *:after {
@@ -5,31 +6,38 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
+/* line 12, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   background: url("../../resources/graphics/background.png");
   color: #333333; }
 
+/* line 19, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
 ul {
   margin: 0 0 1em 0;
   padding: 0; }
+  /* line 22, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   ul li {
     list-style-position: outside;
     list-style-type: none; }
+    /* line 26, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
     ul li .count {
       float: right;
       color: #9a9a9a; }
+  /* line 31, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   ul h2 {
     margin: 0 0 0.5em 0;
     font-size: 1.18em;
     font-weight: 600; }
 
+/* line 38, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
 ::-webkit-input-placeholder,
 ::-moz-placeholder,
 :-ms-input-placeholder {
   color: #bfbfbf; }
 
+/* line 44, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
 .clearfix:after {
   content: " ";
   /* Older browser do not support empty content */
@@ -38,10 +46,12 @@ ul {
   height: 0;
   clear: both; }
 
+/* line 52, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
 .result_stats_container {
   margin: 0 0 2em 0;
   position: relative;
   line-height: 1.4; }
+  /* line 56, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .result_stats_container:before {
     background: #e6e6e6;
     content: " ";
@@ -51,25 +61,30 @@ ul {
     width: 100%;
     bottom: 0.4em;
     left: 0; }
+  /* line 66, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .result_stats_container .result_stats {
     background: white;
     position: relative;
     z-index: 1;
     padding: 0 1em 0 0;
     display: inline; }
+    /* line 72, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
     .result_stats_container .result_stats .result_stats_quantity {
       font-size: 1.18em;
       font-weight: 600; }
+    /* line 76, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
     .result_stats_container .result_stats .result_stats_time {
       font-size: 1em;
       z-index: 1; }
 
+/* line 83, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
 .restaurant_listing {
   margin: 0 0 2em 0;
   position: relative;
   padding: 0 0 0 9.5em;
   min-height: 8em;
   font-family: 'Helvetica', sans-serif; }
+  /* line 89, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .restaurant_listing .photo {
     width: 8em;
     height: 8em;
@@ -79,35 +94,43 @@ ul {
     position: absolute;
     top: 0;
     left: 0; }
+    /* line 98, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
     .restaurant_listing .photo img {
       display: block;
       width: 100%; }
+  /* line 103, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .restaurant_listing .gray {
     color: darkgray; }
+  /* line 106, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .restaurant_listing .row {
     margin: 0 0 0.5em 0;
     line-height: 1.5em; }
+  /* line 110, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .restaurant_listing .name {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.34em;
     font-weight: 600; }
+  /* line 115, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .restaurant_listing .rating {
     font-family: 'Open Sans', sans-serif;
     color: #ffab66;
     font-weight: 600;
     margin-right: 0.5em;
     font-size: 1.18em; }
+  /* line 123, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .restaurant_listing .separators span + span {
     border-left: darkgray 1.5px solid;
     margin-left: 0.1em;
     padding-left: 0.40em; }
 
+/* line 133, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
 .stars {
   display: inline-block;
   position: relative;
   width: 102px;
   height: 20px;
   margin-right: 0.5em; }
+  /* line 139, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .stars .stars_gray,
   .stars .stars_yellow {
     background-image: url("../../resources/graphics/stars-icons_.png");
@@ -118,22 +141,28 @@ ul {
     top: 0;
     left: 0;
     overflow: hidden; }
+  /* line 150, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .stars .stars_gray {
     background-position: 0 0;
     z-index: 1; }
+  /* line 154, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .stars .stars_yellow {
     background-position: 0 -20px;
     z-index: 2; }
 
+/* line 160, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
 .app {
   background: white;
   width: 1060px;
   margin: 3em auto;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25); }
+  /* line 165, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .app .compartment {
     padding: 2em; }
+  /* line 168, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .app .search {
     background: #1c688e; }
+    /* line 170, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
     .app .search input[type=text] {
       width: 100%;
       display: block;
@@ -143,39 +172,50 @@ ul {
       height: 2em;
       padding: 0 0.5em;
       font-size: 1.2em; }
+  /* line 181, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .app .left {
     float: left;
     width: 24%;
     border-right: 1px solid #e6e6e6;
     height: 100%; }
+  /* line 187, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .app .filter li {
     padding: 0 1em;
     border-radius: 4px;
     line-height: 1.8;
     cursor: pointer; }
+    /* line 192, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
     .app .filter li.active, .app .filter li:hover {
       background: #2897c5;
       color: white; }
+      /* line 195, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
       .app .filter li.active .count, .app .filter li:hover .count {
         color: white; }
+  /* line 200, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .app .rating li {
     margin-bottom: 0.25em;
     border-radius: 0;
     border-left: transparent 2px solid; }
+    /* line 204, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
     .app .rating li.active, .app .rating li:hover {
       background: none;
       color: inherit;
       border-left: #e6e6e6 solid 2px; }
+      /* line 208, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
       .app .rating li.active .count, .app .rating li:hover .count {
         color: inherit; }
+  /* line 214, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .app .template {
     display: none; }
+  /* line 217, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .app .right {
     float: right;
     width: 75%; }
+  /* line 221, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
   .app #more {
     text-align: center;
     display: none; }
+    /* line 224, /Users/peterbehr/Downloads/active/project_algolia_assignment/project-files/assets/scss/main.scss */
     .app #more span {
       border: 1px #e6e6e6 solid;
       color: #7f7f7f;
@@ -188,4 +228,4 @@ ul {
       display: inline-block;
       cursor: pointer; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=../../scss */
